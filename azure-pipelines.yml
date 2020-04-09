@@ -15,15 +15,15 @@ pool:
   vmImage: 'windows-2019'
 
 steps:
-- task: NuGetToolInstaller@0
-  displayName: 'Nuget tool installer'
-  inputs:
-    versionSpec: 4.3.0 
+#- task: NuGetToolInstaller@0
+#  displayName: 'Nuget tool installer'
+#  inputs:
+#    versionSpec: 4.3.0 
 
-- task: NuGet@0
-  displayName: 'Restore packages'
-  inputs:
-    command: 'restore'
+#- task: NuGet@0
+#  displayName: 'Restore packages'
+#  inputs:
+#    command: 'restore'
 
 #- task: VSBuild@1
 #  displayName: 'Build'
