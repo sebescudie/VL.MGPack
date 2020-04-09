@@ -4,6 +4,12 @@
 
 This is the MacGyver pack, a collection of utilities I use for my daily patching experience
 
+## Install
+
+`nuget install VL.MGPack`
+
 ## What's inside
 
-_SOON_
+### System
+
+- GetEnvironmentVariable
