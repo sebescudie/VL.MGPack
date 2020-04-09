@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="AI6O93qqqg0OK9z0O5aW4c" LanguageVersion="2020.1.0" Version="0.128">
+  <NugetDependency Id="HcnOO0aIGkfPDsebiLoDaP" Location="VL.CoreLib" Version="2020.1.0" />
+  <Patch Id="HxUEulUGgLnPID6t2mToEJ">
+    <Canvas Id="BiQayDOKG3qMeS6TbtViTX" DefaultCategory="MGPack" CanvasType="FullCategory">
+      <Canvas Id="NBaYAc4v5s3LyJfqtdMPSl" Name="Process" Position="565,502">
+        <!--
+
+    ************************ GetEnvironmentVariable ************************
+
+-->
+        <Node Name="GetEnvironmentVariable" Bounds="683,500" Id="VmSR6twwCeWOJ6kTszf2bD">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ContainerDefinition" Name="Process" />
+          </p:NodeReference>
+          <Patch Id="OSFDeTpyErtOyvtuDU0KVQ">
+            <Canvas Id="CZ9OmJL3M0lO3XohAi43zU" CanvasType="Group">
+              <Node Bounds="686,438,150,68" Id="GFDBtUc4V4eM2v4fJEaag3">
+                <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                  <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                  <FullNameCategoryReference ID="Primitive" />
+                </p:NodeReference>
+                <Pin Id="Tw0mH1BSfE0NkOJ9Y9N6lW" Name="Force" Kind="InputPin" />
+                <Pin Id="BN8jn8U9urMOx16z8WnRKf" Name="Dispose Cached Outputs" Kind="InputPin" />
+                <Pin Id="LJBldGzttgJMpRx7Ra1IjY" Name="Has Changed" Kind="OutputPin" />
+                <Patch Id="ScqTsybLCwKMPVAjx5QwyR" ManuallySortedPins="true">
+                  <Patch Id="TPBpBOm80xVOliXmQzAjBb" Name="Create" ManuallySortedPins="true" />
+                  <Patch Id="UTkxaKAgZRHMh6UOChTTL2" Name="Then" ManuallySortedPins="true" />
+                  <Node Bounds="698,463,25,19" Id="P62y5xd4xWAQcDAPFrRBgw">
+                    <p:NodeReference LastCategoryFullName="System.Environment" LastSymbolSource="mscorlib.dll">
+                      <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                      <Choice Kind="OperationCallFlag" Name="GetEnvironmentVariable" />
+                      <PinReference Kind="InputPin" Name="Target" />
+                    </p:NodeReference>
+                    <Pin Id="AlDETGRtmhENH6JH5soxN0" Name="Variable" Kind="InputPin" />
+                    <Pin Id="HFuU55LM3tbN2Esv89VZ1d" Name="Target" Kind="InputPin" />
+                    <Pin Id="Ie6aR1fWsf9PZDW0znkg2w" Name="Output" Kind="OutputPin" />
+                  </Node>
+                </Patch>
+                <ControlPoint Id="CtM5ZrEKCtFPO2NbaKs9dg" Bounds="700,445" Alignment="Top" />
+                <ControlPoint Id="D3YiPawGpmjQUp6vdGe0sp" Bounds="821,445" Alignment="Top" />
+                <ControlPoint Id="IVDHanEkGg1OLyN1mZHzcQ" Bounds="700,500" Alignment="Bottom" />
+              </Node>
+              <ControlPoint Id="MdjMQ9Ye273OvQxckAaypc" Bounds="700,411" />
+              <ControlPoint Id="V06EHY4WygvLr4V3RjBdqy" Bounds="821,409" />
+              <ControlPoint Id="CCQgjRC2qzwO0p4HKNDkKD" Bounds="700,530" />
+            </Canvas>
+            <Patch Id="T3x5KDtLLUkLLhzufkjMxK" Name="Create" />
+            <Patch Id="N9vsCsp0OhpOSpij4jxhro" Name="Update">
+              <Pin Id="FgNYPvJFqqxMwLo2f2qz2K" Name="Variable" Kind="InputPin" Bounds="705,392" />
+              <Pin Id="CMtctR9qNvNNLslGDwgHlw" Name="Target" Kind="InputPin" Bounds="826,398" />
+              <Pin Id="Qae9Mh6wnRGQUlMZWF0BBc" Name="Output" Kind="OutputPin" Bounds="701,544" />
+            </Patch>
+            <!--
+
+    ************************  ************************
+
+-->
+            <ProcessDefinition Id="SwTFYhsmU10NmJY2klOgwR">
+              <Fragment Id="HvPyeHN1wLSOHXF4eMXkrQ" Patch="T3x5KDtLLUkLLhzufkjMxK" Enabled="true" />
+              <Fragment Id="UkvMgXpMS4fMhAZRCVu25b" Patch="N9vsCsp0OhpOSpij4jxhro" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="GS2woO2LNcILoEVDFG6WFF" Ids="CtM5ZrEKCtFPO2NbaKs9dg,AlDETGRtmhENH6JH5soxN0" />
+            <Link Id="UDlyOJoEl1iNsNz4331Yh2" Ids="MdjMQ9Ye273OvQxckAaypc,CtM5ZrEKCtFPO2NbaKs9dg" />
+            <Link Id="DYPBH7jGcIDMyM3AoW2U2B" Ids="FgNYPvJFqqxMwLo2f2qz2K,MdjMQ9Ye273OvQxckAaypc" IsHidden="true" />
+            <Link Id="DneAUV69u3oMzaEQypOOd7" Ids="D3YiPawGpmjQUp6vdGe0sp,HFuU55LM3tbN2Esv89VZ1d" />
+            <Link Id="LowrFG6dxodOwmfN05kcoQ" Ids="V06EHY4WygvLr4V3RjBdqy,D3YiPawGpmjQUp6vdGe0sp" />
+            <Link Id="MuZRSwsvOPsPd0EhjTJEll" Ids="CMtctR9qNvNNLslGDwgHlw,V06EHY4WygvLr4V3RjBdqy" IsHidden="true" />
+            <Link Id="MYiuQF9RXyvOYqsY6fPJBd" Ids="Ie6aR1fWsf9PZDW0znkg2w,IVDHanEkGg1OLyN1mZHzcQ" />
+            <Link Id="QRxATOb9RuVNsGGvLfoeDI" Ids="IVDHanEkGg1OLyN1mZHzcQ,CCQgjRC2qzwO0p4HKNDkKD" />
+            <Link Id="UVlJG6MPAyrMbE1a2XV2ra" Ids="CCQgjRC2qzwO0p4HKNDkKD,Qae9Mh6wnRGQUlMZWF0BBc" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="OMbfZfc8ftrMDO1WuiGOqS">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="LEIYiMF2UqsNMFaiYee7aX">
+        <Canvas Id="MxxnkGIMDu6QVHfZw7W6uL" CanvasType="Group" />
+        <Patch Id="SGxek7pgsejP7xqrENVG9U" Name="Create" />
+        <Patch Id="NgQ6MyiBkgZMbj7kdriqEM" Name="Update" />
+        <ProcessDefinition Id="RjUHS1Giu1OQRRbYUFT6D4">
+          <Fragment Id="EiPolKFrjPfP0c0L1z56dn" Patch="SGxek7pgsejP7xqrENVG9U" Enabled="true" />
+          <Fragment Id="MQ6o8n2krFDMZ0TofpPyy5" Patch="NgQ6MyiBkgZMbj7kdriqEM" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="MutUJzsLRHKO8jUMKn9alj" Location="VL.Skia" Version="2020.1.0" />
+  <PlatformDependency Id="Tyo96SLyDJvM13xx7YgLTV" Location="mscorlib" />
+</Document>
