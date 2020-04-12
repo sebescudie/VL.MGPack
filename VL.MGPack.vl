@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="AI6O93qqqg0OK9z0O5aW4c" LanguageVersion="2020.1.0" Version="0.128">
+<Document xmlns:p="property" Id="AI6O93qqqg0OK9z0O5aW4c" Summary="Collection of VL utils" Authors="sebescudie" LanguageVersion="2020.1.0" Version="0.128">
   <NugetDependency Id="HcnOO0aIGkfPDsebiLoDaP" Location="VL.CoreLib" Version="2020.1.0" />
   <Patch Id="HxUEulUGgLnPID6t2mToEJ">
     <Canvas Id="BiQayDOKG3qMeS6TbtViTX" DefaultCategory="MGPack" CanvasType="FullCategory">
@@ -9,7 +9,7 @@
     ************************ GetEnvironmentVariable ************************
 
 -->
-        <Node Name="GetEnvironmentVariable" Bounds="683,500" Id="VmSR6twwCeWOJ6kTszf2bD">
+        <Node Name="GetEnvironmentVariable" Bounds="429,382" Id="VmSR6twwCeWOJ6kTszf2bD" Summary="Retrieves environment variables" Tags="system,variable">
           <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
             <Choice Kind="ContainerDefinition" Name="Process" />
           </p:NodeReference>
@@ -52,11 +52,6 @@
               <Pin Id="CMtctR9qNvNNLslGDwgHlw" Name="Target" Kind="InputPin" Bounds="826,398" />
               <Pin Id="Qae9Mh6wnRGQUlMZWF0BBc" Name="Output" Kind="OutputPin" Bounds="701,544" />
             </Patch>
-            <!--
-
-    ************************  ************************
-
--->
             <ProcessDefinition Id="SwTFYhsmU10NmJY2klOgwR">
               <Fragment Id="HvPyeHN1wLSOHXF4eMXkrQ" Patch="T3x5KDtLLUkLLhzufkjMxK" Enabled="true" />
               <Fragment Id="UkvMgXpMS4fMhAZRCVu25b" Patch="N9vsCsp0OhpOSpij4jxhro" Enabled="true" />
@@ -70,6 +65,193 @@
             <Link Id="MYiuQF9RXyvOYqsY6fPJBd" Ids="Ie6aR1fWsf9PZDW0znkg2w,IVDHanEkGg1OLyN1mZHzcQ" />
             <Link Id="QRxATOb9RuVNsGGvLfoeDI" Ids="IVDHanEkGg1OLyN1mZHzcQ,CCQgjRC2qzwO0p4HKNDkKD" />
             <Link Id="UVlJG6MPAyrMbE1a2XV2ra" Ids="CCQgjRC2qzwO0p4HKNDkKD,Qae9Mh6wnRGQUlMZWF0BBc" IsHidden="true" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ HasLoaded ************************
+
+-->
+        <Node Name="HasLoaded" Bounds="449,454" Id="PSqtbtJoW98M2mrjpztXCa">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ContainerDefinition" Name="Process" />
+          </p:NodeReference>
+          <Patch Id="NboKaOBer0jOS1VBuMSyUB">
+            <Canvas Id="TjnBUyxpkC1M5trtH2Luif" CanvasType="Group">
+              <Node Bounds="553,399" Id="ELcLHGfigOILX1KEHnovvE">
+                <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="FrameCounter" />
+                </p:NodeReference>
+                <Pin Id="H99IOpYCMurQBwUVuja29a" Name="Count" Kind="ApplyPin" />
+                <Pin Id="FKKSMCiHdyJQZrmgBx5kot" Name="Reset" Kind="ApplyPin" />
+                <Pin Id="DavzhMXzYkfMeQajXSO1Oe" Name="Value" Kind="OutputPin" />
+              </Node>
+              <Pad Id="StXQuuatFBCOXcDQDpvGY8" Comment="Count" Bounds="555,356,35,35" ShowValueBox="true" isIOBox="true" Value="True">
+                <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="TypeFlag" Name="Boolean" />
+                </p:TypeAnnotation>
+              </Pad>
+              <Node Bounds="553,447,25,19" Id="Q5QBx7YUviVOPHdAOo6vZf">
+                <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="&gt;" />
+                </p:NodeReference>
+                <Pin Id="D72E1HnPizPOfPxacN9Xp7" Name="Input" Kind="InputPin" />
+                <Pin Id="Mt9Jt4SrcaCP4QNvjHdMoO" Name="Input 2" Kind="InputPin" DefaultValue="20">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Integer32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="HPHP1AuQVslPMPLNURoc7T" Name="Result" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="KEVHcZfzhphP1IRSmbJJNo" Bounds="555,506" />
+            </Canvas>
+            <Patch Id="Q2XSnUtoyG6L3RTxaWfuoQ" Name="Create" />
+            <Patch Id="T7GviLCcpb9PIKPcXO1uOj" Name="Update">
+              <Pin Id="HuWlS98juCRL9tAQlB8Zb1" Name="Result" Kind="OutputPin" Bounds="557,500" />
+            </Patch>
+            <!--
+
+    ************************  ************************
+
+-->
+            <ProcessDefinition Id="R88dl5oVWWpMLvhWgf3f1r">
+              <Fragment Id="LuZjKsaJ4bEMi29obUdzcb" Patch="Q2XSnUtoyG6L3RTxaWfuoQ" Enabled="true" />
+              <Fragment Id="DMT2arg9HMTMjjv3kMGsFk" Patch="T7GviLCcpb9PIKPcXO1uOj" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="PI3ovESAmeQMJOkKUkckDj" Ids="StXQuuatFBCOXcDQDpvGY8,H99IOpYCMurQBwUVuja29a" />
+            <Link Id="IVSLulFZhoyMZP18uncSis" Ids="DavzhMXzYkfMeQajXSO1Oe,D72E1HnPizPOfPxacN9Xp7" />
+            <Link Id="UIIlwwPAS8GLbYAHmBtN7v" Ids="HPHP1AuQVslPMPLNURoc7T,KEVHcZfzhphP1IRSmbJJNo" />
+            <Link Id="USReqBFWYQKO1rzVVLovxz" Ids="KEVHcZfzhphP1IRSmbJJNo,HuWlS98juCRL9tAQlB8Zb1" IsHidden="true" />
+          </Patch>
+        </Node>
+      </Canvas>
+      <Canvas Id="ADBqwxtH4g2Osv8jlZrt3p" Name="Debug" Position="565,579">
+        <!--
+
+    ************************ Framerate ************************
+
+-->
+        <Node Name="Framerate" Bounds="603,452" Id="RRBc3Ynq4nQLacXFcIWQrK" Summary="Retrieves the framerate of the running vvvv instance" Remarks="Copy and pasted from Skia's PerfMeter node" Tags="framerate,performance,debug">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ContainerDefinition" Name="Process" />
+          </p:NodeReference>
+          <Patch Id="IuuQFQBIUxQOqunGaOikJI">
+            <Canvas Id="D7D9vIytv4GND8TZqqRwKO" CanvasType="Group">
+              <Node Bounds="534,408,86,19" Id="LIz2HqgD0QpNZhWCzYjEqw">
+                <p:NodeReference LastCategoryFullName="Animation.IFrameClock" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="TimeDifference (Float32)" />
+                </p:NodeReference>
+                <Pin Id="U94u0iMPvjMM6GQzxTaHA1" Name="Clock" Kind="InputPin" />
+                <Pin Id="K0V4Bsdk7o9NZIAODfziIu" Name="Result" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="514,444,25,19" Id="F55OJLBg63aMQXlfldM8Mt">
+                <p:NodeReference LastCategoryFullName="Math" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="/" />
+                </p:NodeReference>
+                <Pin Id="PcG9OuGFbmqLtBl8GDrfc9" Name="Input" Kind="InputPin" DefaultValue="1">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="UQs8I9Pwb52OcQY0AQd7Fr" Name="Input 2" Kind="InputPin" />
+                <Pin Id="I3PC9q37PScOVoK1yvYZzH" Name="Output" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="Oox1adVsW8QMLMf7KkYgnR" Bounds="536,382" />
+              <ControlPoint Id="C6Qum6goOMlO05AIvIsTzg" Bounds="516,538" />
+              <Node Bounds="514,487,45,19" Id="KaFZ7E4eVwLPaZrLe6BGcu">
+                <p:NodeReference LastCategoryFullName="Animation.FrameBased" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="IIR (LowPass)" />
+                </p:NodeReference>
+                <Pin Id="JJT0te3tv50MfUWigLC5hj" Name="Value" Kind="InputPin" />
+                <Pin Id="QSuSOJyqLH9P0quj78UulE" Name="Alpha" Kind="InputPin" DefaultValue="0.9">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Float32" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="PhbzOKPzNcwMxF8HziGlTS" Name="Reset" Kind="InputPin">
+                  <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="TypeFlag" Name="Boolean" />
+                  </p:TypeAnnotation>
+                </Pin>
+                <Pin Id="Bz9OPwhezvyLwoykaWLutM" Name="Value" Kind="OutputPin" />
+              </Node>
+            </Canvas>
+            <Patch Id="TIwXOd3u7ELQYvX2T764Bi" Name="Create" />
+            <Patch Id="JfMRfTCBOZMLqL6v6scZGQ" Name="Update">
+              <Pin Id="DtrfMzMLS3oLwgSKyRwt0f" Name="Clock" Kind="InputPin" Bounds="552,358" />
+              <Pin Id="MlKOkmPjX9TPYN62piPQGY" Name="Output" Kind="OutputPin" Bounds="510,493" />
+            </Patch>
+            <ProcessDefinition Id="AxRjCbNznLwQH6RvccssRX">
+              <Fragment Id="PNOEW5YktT0Nt2HqnmW6N8" Patch="TIwXOd3u7ELQYvX2T764Bi" Enabled="true" />
+              <Fragment Id="Fja0diOcnGzMzkezadYniV" Patch="JfMRfTCBOZMLqL6v6scZGQ" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="SyYHSkQw3J5Op0lkdV8o4d" Ids="K0V4Bsdk7o9NZIAODfziIu,UQs8I9Pwb52OcQY0AQd7Fr" />
+            <Link Id="BQ8LtBFPamuNfKBoVBIs3R" Ids="Oox1adVsW8QMLMf7KkYgnR,U94u0iMPvjMM6GQzxTaHA1" />
+            <Link Id="Rhb54Rg50QFNVwY3lDHDbc" Ids="DtrfMzMLS3oLwgSKyRwt0f,Oox1adVsW8QMLMf7KkYgnR" IsHidden="true" />
+            <Link Id="JcmVX3XHEjqNW4o3oDeCZ0" Ids="C6Qum6goOMlO05AIvIsTzg,MlKOkmPjX9TPYN62piPQGY" IsHidden="true" />
+            <Link Id="Bg6zvs3DAVhLCQUlAYB2HQ" Ids="I3PC9q37PScOVoK1yvYZzH,JJT0te3tv50MfUWigLC5hj" />
+            <Link Id="VLebQNhanCLNwWidjGjzQh" Ids="Bz9OPwhezvyLwoykaWLutM,C6Qum6goOMlO05AIvIsTzg" />
+          </Patch>
+        </Node>
+        <!--
+
+    ************************ TimeCounter ************************
+
+-->
+        <Node Name="TimeCounter" Bounds="603,515" Id="BynkiUcJztlO8ft9mpUcYF" Summary="Outputs the elapsed time (as TimeSpan) since the node was instantiated" Tags="uptime">
+          <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="builtin">
+            <Choice Kind="ContainerDefinition" Name="Process" />
+          </p:NodeReference>
+          <Patch Id="T2sRav4kWrFPkklsAxWL1O">
+            <Canvas Id="EDgIj3qcg2SPIWHeAMn9EL" CanvasType="Group">
+              <Node Bounds="585,459,36,19" Id="BFoQd1aXlI5LCnSwfGs2nt">
+                <p:NodeReference LastCategoryFullName="System.DateTime" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Now" />
+                  <CategoryReference Kind="Category" Name="DateTime" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="LE5l3VHn9KJPHz5CeOv60z" Name="Now" Kind="OutputPin" />
+              </Node>
+              <Pad Id="CBwgI3cOmNcQdZFPBlGuaU" SlotId="IrewYiqVSNfMr9cpqNqHmd" Bounds="587,512" />
+              <Node Bounds="565,582,25,19" Id="BmyABioFenJMcVBg2F5Lty">
+                <p:NodeReference LastCategoryFullName="System.DateTime" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="-" />
+                  <CategoryReference Kind="Category" Name="DateTime" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="N2QRuR3NTVBNhaSV9cWUFh" Name="Input" Kind="InputPin" />
+                <Pin Id="LyyObSI1laOLam5NJaNLKm" Name="Input 2" Kind="InputPin" />
+                <Pin Id="QjR6oTNQvTCMHSLskUOBiB" Name="Output" Kind="OutputPin" />
+              </Node>
+              <Node Bounds="536,546,36,19" Id="PTJmPLRpGtgPsr4smlsTpe">
+                <p:NodeReference LastCategoryFullName="System.DateTime" LastSymbolSource="CoreLibBasics.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="OperationCallFlag" Name="Now" />
+                  <CategoryReference Kind="Category" Name="DateTime" NeedsToBeDirectParent="true" />
+                </p:NodeReference>
+                <Pin Id="CI3fnevseTjNKy3B0x7GVc" Name="Now" Kind="OutputPin" />
+              </Node>
+              <ControlPoint Id="PwQu88GeIFHNSt97WrjOLx" Bounds="566,635" />
+            </Canvas>
+            <Patch Id="OcUYuUV1OSSLO9Qm4S8Gzy" Name="Create" ParticipatingElements="BidLDEbujsSMLiKcSH0T1H" />
+            <Patch Id="DyPczQfw1JZPwLOpU1ozJD" Name="Update">
+              <Pin Id="SeAFgbhKAaZPp6l8dJ5Pro" Name="Output" Kind="OutputPin" Bounds="570,645" />
+            </Patch>
+            <ProcessDefinition Id="GPpAzwFXoNkMTP6EoJ3ZnT">
+              <Fragment Id="Tn2FOST2CY0P08I54I50pg" Patch="OcUYuUV1OSSLO9Qm4S8Gzy" Enabled="true" />
+              <Fragment Id="IXeD3SFjhbFMdmQstsCAPJ" Patch="DyPczQfw1JZPwLOpU1ozJD" Enabled="true" />
+            </ProcessDefinition>
+            <Link Id="BidLDEbujsSMLiKcSH0T1H" Ids="LE5l3VHn9KJPHz5CeOv60z,CBwgI3cOmNcQdZFPBlGuaU" />
+            <Slot Id="IrewYiqVSNfMr9cpqNqHmd" Name="Start Time" Summary="The time the node was created" />
+            <Link Id="HL8XS1NAGABNamEEBvlg0m" Ids="CBwgI3cOmNcQdZFPBlGuaU,LyyObSI1laOLam5NJaNLKm" />
+            <Link Id="JTTZdliLdtGNpU4PzB7F0r" Ids="CI3fnevseTjNKy3B0x7GVc,N2QRuR3NTVBNhaSV9cWUFh" />
+            <Link Id="BXSqw0cWBCyNL89mcVUJ2P" Ids="QjR6oTNQvTCMHSLskUOBiB,PwQu88GeIFHNSt97WrjOLx" />
+            <Link Id="TADYrLWy1JVQaqWHUq9c0u" Ids="PwQu88GeIFHNSt97WrjOLx,SeAFgbhKAaZPp6l8dJ5Pro" IsHidden="true" />
           </Patch>
         </Node>
       </Canvas>
