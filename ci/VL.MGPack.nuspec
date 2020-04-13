@@ -16,7 +16,7 @@
     <tags>vl tools</tags>
   </metadata>
   <files>
-    <file src="*.vl"/>
-    <file src="**\*.vl"/>
+    <file src="..\*.vl"/>
+    <file src="..\**\*.vl"/>
   </files>
 </package>
