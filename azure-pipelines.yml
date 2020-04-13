@@ -34,7 +34,7 @@ steps:
   displayName: 'NuGet pack'
   inputs:
     command: pack
-    packagesToPack: '*.nuspec'
+    packagesToPack: '**/*.nuspec'
 
 - task: NuGetCommand@2
   displayName: 'NugGet push'
