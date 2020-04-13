@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="K6k81xJP0VuOMyNRHAmh0f" LanguageVersion="2020.1.0" Version="0.128">
+  <NugetDependency Id="EEUJpNtwT78OX3EDqsQoI0" Location="VL.CoreLib" Version="2020.1.0" />
+  <Patch Id="Qdfn73yzYg6PxnxFXm2ehN">
+    <Canvas Id="ILMNnkSeUpZMvfHh4teFvn" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="LtXnKRWydIsOhJnwKWe0TG">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="SKYz1Z4NVqQOKAcnEvfmVy">
+        <Canvas Id="VVHlcy5rQ8HLeG6tci9nby" CanvasType="Group">
+          <Pad Id="AvsyHsir5JxMLw1UgZrDfT" Bounds="315,401,145,19" ShowValueBox="true" isIOBox="true" Value="please pack that nuget">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="JbVKRc5lejuMb0wZLkU2Ey" Name="Create" />
+        <Patch Id="AxlnGvB0JbQObYxIZglR4b" Name="Update" />
+        <!--
+
+    ************************  ************************
+
+-->
+        <ProcessDefinition Id="Hrk3pE7mhc8LmgHBrgQdWZ">
+          <Fragment Id="QRs7aEbTBwPOspiJIZY4dm" Patch="JbVKRc5lejuMb0wZLkU2Ey" Enabled="true" />
+          <Fragment Id="B674vrwMDFHOx5H7Dvk3Gd" Patch="AxlnGvB0JbQObYxIZglR4b" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="GyMnmIw5KYcNooyT9UJ6GT" Location="VL.Skia" Version="2020.1.0" />
+</Document>
