@@ -10,6 +10,19 @@ This is the MacGyver pack, a collection of utilities I use for my daily patching
 
 ## What's inside
 
+## VVVV
+
+- HasLoaded
+- Framerate
+
 ### System
 
 - GetEnvironmentVariable
+
+## Time
+
+- TimeCounter
+
+## Rectangle
+
+- StackX
