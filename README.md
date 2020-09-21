@@ -12,21 +12,27 @@ This is the MacGyver pack, a collection of utilities I use for my daily patching
 
 ### VVVV
 
-| HasLoaded | Outputs `True` when vvvv has counted 10 frames         |
+| Node      | Description                                            |
 |-----------|--------------------------------------------------------|
 | Framerate | Shows vvvv's framerate. Taken from VL.Skia's perfmeter |
+| HasLoaded | Outputs `True` when vvvv has counted 10 frames         |
 
 ### System
 
-| GetEnvironmentVariable | Simply retrieves an environment variable |
-|------------------------|------------------------------------------|
+| Node      | Description                                            |
+|-----------|--------------------------------------------------------|
+| GetEnvironmentVariable | Simply retrieves an environment variable  |
+
 
 ### Time
 
-| TimeCounter | Returns a `TimeSpan` giving the elapsed time since the node was created |
+| Node        | Description                                                             |
 |-------------|-------------------------------------------------------------------------|
+| TimeCounter | Returns a `TimeSpan` giving the elapsed time since the node was created |
+
 
 ### Rectangle
 
-| StackX | Stacks Rectangles next to each other |
+|Node    |Description                           |
 |--------|--------------------------------------|
+| StackX | Stacks Rectangles next to each other |
